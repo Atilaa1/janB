@@ -1,0 +1,31 @@
+<a [routerLink]="['/add']">Add me pls</a><br>
+<input [(ngModel)]="searchText" placeholder="Pretraga">
+<table>
+    <tr>
+        <th>Id</th>
+        <th>title</th>
+        <th>price</th>
+        <th>discountPercentage</th>
+        <th>rating</th>
+        <th>stock</th>
+        <th>brand</th>
+        <th>category</th>
+        <th>thumbnail</th>
+        <th>images</th>
+        <th>Eksn men men</th>
+    </tr>
+    <tr *ngFor="let products of products| filter:searchText;index as i">
+        <th>{{products.id}}</th>
+        <th>{{products.title}}</th>
+        <th>{{products.price}}</th>
+        <th>{{products.discountPercentage}}</th>
+        <th>{{products.rating}}</th>
+        <th>{{products.stock}}</th>
+        <th>{{products.brand}}</th>
+        <th>{{products.category}}</th>
+        <img src="{{products.thumbnail}}" alt="slika" width="250px" height="250px">
+        <img src="{{products.images[1]}}" alt="slika" width="250px" height="250px">
+        <a [routerLink]="['/products',products.id]">Details</a>
+
+    </tr>
+</table>

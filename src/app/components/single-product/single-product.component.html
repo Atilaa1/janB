@@ -1,0 +1,29 @@
+<table>
+    <tr>
+        <th>Id</th>
+        <th>title</th>
+        <th>price</th>
+        <th>discountPercentage</th>
+        <th>rating</th>
+        <th>stock</th>
+        <th>brand</th>
+        <th>category</th>
+        <th>thumbnail</th>
+        <th>images</th>
+        <th>Eksn men men</th>
+    </tr>
+    <tr>
+        <th>{{product.id}}</th>
+        <th>{{product.title}}</th>
+        <th>{{product.price}}</th>
+        <th>{{product.discountPercentage}}</th>
+        <th>{{product.rating}}</th>
+        <th>{{product.stock}}</th>
+        <th>{{product.brand}}</th>
+        <th>{{product.category}}</th>
+        <img src="{{product.thumbnail}}" alt="slika" width="250px" height="250px">
+        <img src="{{product.images[1]}}" alt="slika" width="250px" height="250px">
+        <a [routerLink]="['/products']">Nazad</a>
+
+    </tr>
+</table>
